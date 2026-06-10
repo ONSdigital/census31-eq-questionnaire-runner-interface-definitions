@@ -1,7 +1,6 @@
-# Survey Data Collection Documentation
+# Census 2031 EQ Questionnaire Runner Interface Definitions
 
-This project holds the documentation for sharing and agreeing interfaces
-between different components in the SDC suite of components. 
+This repository contains the documentation, definitions, and specifications for interfaces between EQ and the dependent services involved in the 2031 Census. It was cloned from the historical SDC repo https://github.com/ONSdigital/ons-schema-definitions for the purpose of clarity and ownership.
 
 ## Proposing Changes
 1. Open a PR with proposed API changes
