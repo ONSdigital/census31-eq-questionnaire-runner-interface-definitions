@@ -1,9 +1,9 @@
-# JWT Profile
+# JSON Web Token Profile
 
-Where a definition uses JWT it **SHALL** conform to the following
+Where a definition uses JSON Web Token (JWT) it **SHALL** conform to the following
 profile:
 
-The payload is contained within a JSON Web Tokens (JWT) \~ RFC 7519
+The payload is contained within a JWT \~ RFC 7519
 signed as per JSON Web Signature (JWS) \~ RFC 7515. The signed JWT is
 used as the payload to a JSON Web Encryption (JWE) \~ RFC 7516.
 
@@ -23,7 +23,7 @@ probability that the same value will be used twice, even across multiple
 servers. The same UUID value **MUST NOT** appear twice in the same JWT
 in any claim.
 
-## JWS Protected Header
+## JSON Web Signature (JWS) Protected Header
 
 JWS Protected Header **SHALL** contain the following claims:
 
@@ -33,7 +33,7 @@ JWS Protected Header **SHALL** contain the following claims:
   (reference [https://tools.ietf.org/html/rfc7517#section-4.5](https://tools.ietf.org/html/rfc7517#section-4.5) and
   [https://tools.ietf.org/html/rfc3280#section-4.2.1.2](https://tools.ietf.org/html/rfc3280#section-4.2.1.2))
 
-## JWT Payload
+## JSON Web Token (JWT) Payload
 
 All JWT payloads **SHALL** include the follow claims:
 
@@ -52,7 +52,7 @@ the definitions within this website.
 JWT Protected Header and JWT Payload are signed with RSASSA-PKCS1-v1_5
 using SHA-256 (RSA-SHA256) using a Private Key to form a JWS.
 
-## JWE Header
+## Encrypted JSON Web Token (JWE) Header
 
 JWE header will include the `alg` and `enc` claims:
 
@@ -83,4 +83,4 @@ RFC7516).
 
 ## Decrypting
 
-JWE payload is decrypted (reverse of encryption
+JWE payload is decrypted (reverse of encryption)
