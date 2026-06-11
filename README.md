@@ -12,14 +12,14 @@ This repository contains the documentation, definitions, and specifications for 
 
 Documentation can be found in `/docs`.
 
-- [JWT Profile](docs/jwt_profile.md)
-- [Respondent Management (RM) to eQ Runner (eQ)](docs/respondent_management_to_electronic_questionnaire_runner.md)
-- [Electronic Questionnaire Runner Response To Downstream](docs/electronic_questionnaire_runner_to_downstream.md)
+- [JSON Web Token (JWT) Profile](docs/jwt_profile.md)
+- [EQ Launch - Upstream Respondent Management System to EQ Runner](docs/respondent_management_to_electronic_questionnaire_runner.md)
+- [EQ Submission - EQ Runner to Downstream Ingestion Service](docs/electronic_questionnaire_runner_to_downstream.md)
 - [JSON Examples](examples)
 
 ## JSON Schema Validation
 
-Both the launch and receipting JSON schema can be validated using JSON Schema definitions. The JSON schemas are defined using [Draft 2020-12](https://json-schema.org/specification-links.html#2020-12) and are validated via [AJV](https://ajv.js.org/). 
+The launch and submission JSON schema can be validated using JSON Schema definitions. The JSON schemas are defined using [Draft 2020-12](https://json-schema.org/specification-links.html#2020-12) and are validated via [AJV](https://ajv.js.org/). 
 
 ### Prerequisites
 - Node installed matching the version specified in `.nvmrc`. It is recommended that you use [nvm](https://github.com/nvm-sh/nvm) to manage your Node versions.
