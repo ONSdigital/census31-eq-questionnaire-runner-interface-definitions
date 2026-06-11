@@ -1,7 +1,7 @@
 # Respondent Management System to EQ Runner
 
 A respondent will initially access the EQ Runner service from an upstream Respondent Management System (e.g. Respondent Home). This is typically by way of an `HTTP 302` browser redirect when the respondent "launches" a questionnaire from within the Response Management System. 
-The redirect **MUST** include a set of well-defined attributes (claims) constructed by the Response Management System. These are required by EQ Runner to authenticate the respondent, and to provide the necessary data to render the required questionnaire.
+The redirect **MUST** include a set of well-defined attributes (claims) constructed by the Respondent Management System. These are required by EQ Runner to authenticate the respondent, and to provide the necessary data to render the required questionnaire.
 This data is wrapped inside a JSON Web Token (JWT) passed in a `token` query string parameter in the redirected URL. The token value is digitally signed by a trusted client application (e.g. Respondent Home) to ensure the integrity and authenticity of the data being passed to EQ Runner.
 This creates a clean interface for any Respondent Management System to integrate with the EQ Runner.
 
