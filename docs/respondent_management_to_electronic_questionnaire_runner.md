@@ -7,7 +7,7 @@ This creates a clean interface for any Respondent Management System to integrate
 
 ## JWT payload
 The structure of the JWT payload that the Respondent Management System uses is be defined using the version property.
-The downstream data is structured based on the version property provided in the claims, for information regarding downstream data formats, see [EQ Runner to Downstream][eq_runner_to_downstream].
+The downstream data is structured based on the version property provided in the claims, for information regarding downstream data formats, see [EQ Runner to Downstream Ingestion Service][eq_runner_to_downstream].
 
 ## JWT envelope / transport
 
