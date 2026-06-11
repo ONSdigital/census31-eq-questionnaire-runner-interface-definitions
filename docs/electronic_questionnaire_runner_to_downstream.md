@@ -1,6 +1,6 @@
-# Electronic Questionnaire Runner Response To Downstream
+# EQ Runner to Downstream Ingestion Service
 
-All submitted survey responses, feedback and user research for a collection exercise (a periodic questionnaire within a survey series) are transformed into data formats described below for downstream processing and analysis. Currently, only the v2 downstream data format is supported (See: [Payload Formats][payload_formats]). The format used is derived by the `version` that was provided in the launch JWT token. For more information on launch tokens, see [RM to EQ][rm_to_eq_runner].
+All submitted questionnaire responses and feedback are transformed into data formats described below for downstream processing and analysis. Currently, only the v2 downstream data format is supported (See: [Payload Formats][payload_formats]). The format used is derived by the `version` that was provided in the launch JWT token. For more information on launch tokens, see [RM to EQ][rm_to_eq_runner].
 
 The data structures created by EQ Runner (e.g. the answer store) are designed and optimised primarily for the purposes of generic functionality within the Runner application. As a general principle, the extent of the transform carried out by Runner on submitted response data beyond its native data models, as well as on claims received by the launching system, is minimal. It is not the responsibility of Runner to carry out bespoke data transforms. Historically, SDX has been responsible for more extensive and complex data transforms.
 
