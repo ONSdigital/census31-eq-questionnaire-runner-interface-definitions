@@ -1,6 +1,6 @@
 # Census 2031 EQ Questionnaire Runner Interface Definitions
 
-This repository contains the documentation, definitions, and specifications for interfaces between EQ and the dependent services involved in the 2031 Census. It was cloned from the historical SDC repo https://github.com/ONSdigital/ons-schema-definitions for the purpose of clarity and ownership.
+This repository contains the documentation, definitions, schema specifications, and examples for interfaces between EQ and the dependent services involved in the 2031 Census. It was cloned from the historical SDC repo https://github.com/ONSdigital/ons-schema-definitions for the purpose of clarity and ownership.
 
 ## Proposing Changes
 1. Open a PR with proposed API changes
