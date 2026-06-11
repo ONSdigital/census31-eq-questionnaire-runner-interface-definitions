@@ -6,8 +6,8 @@ This data is wrapped inside a JSON Web Token (JWT) passed in a `token` query str
 This creates a clean interface for any Respondent Management System to integrate with the EQ Runner.
 
 ## JWT payload
-The structure of the JWT payload that the Respondent Management System uses is be defined using the version property.
-The downstream data is structured based on the version property provided in the claims, for information regarding downstream data formats, see [EQ Runner to Downstream Ingestion Service][eq_runner_to_downstream].
+The structure of the JWT payload that the Respondent Management System uses is defined in the `version` property.
+The downstream data is structured based on the `version` property provided in the claims, for information regarding downstream data formats, see [EQ Runner to Downstream Ingestion Service][eq_runner_to_downstream].
 
 ## JWT envelope / transport
 
