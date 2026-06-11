@@ -1,16 +1,13 @@
-# Respondent Management (RM) to EQ Runner (EQ)
+# Respondent Management System to EQ Runner
 
-When a respondent is ready to take a survey hosted on EQ Runner, a set of details need to be passed to EQ Runner to set up the survey correctly.
-This data is wrapped inside a JSON Web Token (JWT) which is attached to the end of a URL, digitally signed and authorised by an appropriate client application.
-This creates a clean interface for any respondent management system to integrate with the EQ Runner.
+A respondent will initially access the EQ Runner service from an upstream Respondent Management System (e.g. Respondent Home). This is typically by way of an `HTTP 302` browser redirect when the respondent "launches" a questionnaire from within the Response Management System. 
+The redirect **MUST** include a set of well-defined attributes (claims) constructed by the Respondent Management System. These are required by EQ Runner to authenticate the respondent, and to provide the necessary data to render the required questionnaire.
+This data is wrapped inside a JSON Web Token (JWT) passed in a `token` query string parameter in the redirected URL. The token value is digitally signed by a trusted client application (e.g. Respondent Home) to ensure the integrity and authenticity of the data being passed to EQ Runner.
+This creates a clean interface for any Respondent Management System to integrate with the EQ Runner.
 
 ## JWT payload
-The structure of the JWT payload that the RM system uses can be defined using the version property.
-The only current supported version for launching EQ Runner is v2 (Support for the deprecated v1 version has been removed).
-From v2, the JWT payload is required to define a `version` property with the associated version.
-The downstream data is structured based on the version property provided, for information regarding downstream data formats, see [EQ Runner to Downstream][eq_runner_to_downstream].
-
-- [RM to EQ Runner Payload v2][rm_to_eq_runner_payload_v2]
+The structure of the JWT payload that the Respondent Management System uses is defined in the `version` property.
+The downstream data is structured based on the `version` property provided in the claims, for information regarding downstream data formats, see [EQ Runner to Downstream Ingestion Service][eq_runner_to_downstream].
 
 ## JWT envelope / transport
 

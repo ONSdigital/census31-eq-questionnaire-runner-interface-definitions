@@ -1,21 +1,17 @@
-# Electronic Questionnaire Runner Response To Downstream
+# EQ Runner to Downstream Ingestion Service
 
-All submitted survey responses, feedback and user research for a collection exercise (a periodic questionnaire within a survey series) are transformed into data formats described below for downstream processing and analysis. Currently, only the v2 downstream data format is supported (See: [Payload Formats][payload_formats]). The format used is derived by the `version` that was provided in the launch JWT token. For more information on launch tokens, see [RM to EQ][rm_to_eq_runner].
+All submitted questionnaire responses and feedback are transformed into data formats described below for downstream processing and analysis. The format used is specified by the `version` claim provided in the launch JWT token. Currently, only [Payload Version 2](eq_runner_to_downstream_payload_v2.md) is supported.
 
-The data structures created by EQ Runner (e.g. the answer store) are designed and optimised primarily for the purposes of generic functionality within the Runner application. As a general principle, the extent of the transform carried out by Runner on submitted response data beyond its native data models, as well as on claims received by the launching system, is minimal. It is not the responsibility of Runner to carry out bespoke data transforms. Historically, SDX has been responsible for more extensive and complex data transforms.
+The data structures included in the payloads are designed and optimised for the purposes of generic functionality within the EQ Runner application. It is not the responsibility of EQ Runner to carry out any transforms on submitted response data beyond its native data models, nor on any claims provided by the launching system and included in the response data. Any transforms will be carried out by downstream systems as required.
 
-The response JSON is encrypted using the public key of the downstream transport mechanism at submission and signed by the Runner private key for downstream verification.
-
-## Rabbit MQ Submitter
-
-When the Runner Rabbit MQ submitter is used, the ciphertext message is published to the designated queue for downstream consumption. Feedback is not supported for Rabbit MQ.
+The response JSON is encrypted using the public key of the downstream transport mechanism at submission and signed by the EQ Runner private key for downstream verification.
 
 ## GCS Submitter
 
-When the Runner GCS submitter is used, an object containing the response ciphertext is written to a bucket for downstream consumption.
+When the EQ Runner GCS submitter is configured, an object containing the response ciphertext is written to Cloud Storage for downstream consumption.
 
 - For `surveyresponse` objects, the object ID is named for the response's `tx_id`.
-- For `feedback` and `user_research` objects, the object ID is named with a uniquely generated UUID.
+- For `feedback` objects, the object ID is named with a uniquely generated UUID.
 
 The GCS response object contains associated [metadata][gcs_metadata] which can be used in a Pub/Sub messaging strategy for further event driven processes (e.g. receipting and triggering ingestion flow).
 Metadata will always contain a `tx_id` and a `case_id`.
@@ -40,11 +36,7 @@ Additional receipting metadata may be added, which are defined by `survey_metada
 
 ## Payload Formats
 
-The downstream payload format is set using the `version` that was provided in the launch token, currently only v2 is supported. This is not to be confused with runner's `data_version` which is responsible for the structure of the `data` property within the payload.
-
-The v2 payload format is documented below.
-
-2. [EQ Runner to Downstream Payload v2][eq_runner_to_downstream_payload_v2]
+The downstream payload format is set using the `version` that was provided in the launch token, currently only [Payload Version 2](eq_runner_to_downstream_payload_v2.md) is supported. This is not to be confused with runner's `data_version` which is responsible for the structure of the `data` property within the payload.
 
 ## JWT envelope / transport
 

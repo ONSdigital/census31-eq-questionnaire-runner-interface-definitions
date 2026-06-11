@@ -1,26 +1,25 @@
 # Census 2031 EQ Questionnaire Runner Interface Definitions
 
-This repository contains the documentation, definitions, and specifications for interfaces between EQ and the dependent services involved in the 2031 Census. It was cloned from the historical SDC repo https://github.com/ONSdigital/ons-schema-definitions for the purpose of clarity and ownership.
+This repository contains the documentation, definitions, schema specifications, and examples for interfaces between EQ and the dependent services involved in the 2031 Census. It was cloned from the historical SDC repo https://github.com/ONSdigital/ons-schema-definitions for the purpose of clarity and ownership.
 
 ## Proposing Changes
 1. Open a PR with proposed API changes
-1. Add reviewers to the PR this change may affect
-1. Changes should be agreed upon and approved between all affected teams
-1. Any work that will come out of the proposal should be put on the teams backlogs
+2. Add reviewers to the PR this change may affect
+3. Changes should be agreed upon and approved between all affected teams
+4. Any work that will come out of the proposal should be put on the teams backlogs
 
 ## Docs
 
 Documentation can be found in `/docs`.
 
-- [JWT Profile](docs/jwt_profile.md)
-- [Respondent Management (RM) to eQ Runner (eQ)](docs/respondent_management_to_electronic_questionnaire_runner.md)
-- [Electronic Questionnaire Runner Response To Downstream](docs/electronic_questionnaire_runner_to_downstream.md)
-- [Survey Data Exchange to and from Respondent Account Services](docs/survey_data_exchange_to_respondent_account_services.md)
+- [JSON Web Token (JWT) Profile](docs/jwt_profile.md)
+- [EQ Launch - Upstream Respondent Management System to EQ Runner](docs/respondent_management_to_electronic_questionnaire_runner.md)
+- [EQ Submission - EQ Runner to Downstream Ingestion Service](docs/electronic_questionnaire_runner_to_downstream.md)
 - [JSON Examples](examples)
 
 ## JSON Schema Validation
 
-Both the launch and receipting JSON schema can be validated using JSON Schema definitions. The JSON schemas are defined using [Draft 2020-12](https://json-schema.org/specification-links.html#2020-12) and are validated via [AJV](https://ajv.js.org/). 
+The launch and submission JSON schema can be validated using JSON Schema definitions. The JSON schemas are defined using [Draft 2020-12](https://json-schema.org/specification-links.html#2020-12) and are validated via [AJV](https://ajv.js.org/). 
 
 ### Prerequisites
 - Node installed matching the version specified in `.nvmrc`. It is recommended that you use [nvm](https://github.com/nvm-sh/nvm) to manage your Node versions.

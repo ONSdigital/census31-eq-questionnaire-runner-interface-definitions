@@ -70,8 +70,8 @@ const validateSubmissionAnswerCodes = (jsonData) => {
   if (missingCodes) {
     errors.push(
       `data.answer_codes.code must be globally unique. Found ${Math.abs(
-        missingCodes
-      )} duplicate code(s).`
+        missingCodes,
+      )} duplicate code(s).`,
     );
   }
 
@@ -79,7 +79,7 @@ const validateSubmissionAnswerCodes = (jsonData) => {
   for (const code of answerCodes) {
     if (!answerIds.has(code.answer_id)) {
       errors.push(
-        `Answer ID '${code.answer_id}' from data.answer_codes does not exist in the data.answers array`
+        `Answer ID '${code.answer_id}' from data.answer_codes does not exist in the data.answers array`,
       );
     }
   }
@@ -91,7 +91,7 @@ const validateSubmissionAnswerCodes = (jsonData) => {
       // If the answer_id doesn't exist, log out a message
       errors.push(
         // eslint-disable-next-line camelcase
-        `Answer ID '${answer.answer_id}' from data.answers does not exist in the data.answer_codes array`
+        `Answer ID '${answer.answer_id}' from data.answers does not exist in the data.answer_codes array`,
       );
     }
   }
@@ -115,7 +115,7 @@ const validateSchemaForFile = (fileName, baseSchema, schemaType) => {
           { Errors: errors },
           {
             depth: null,
-          }
+          },
         );
         return false;
       }
@@ -132,7 +132,7 @@ const validateSchemaForFile = (fileName, baseSchema, schemaType) => {
 
 const validateSchemas = (schemaType, filepathOrGlob) => {
   const baseSchema = JSON.parse(
-    fs.readFileSync(baseSchemaToSchemaTypeMapping[schemaType])
+    fs.readFileSync(baseSchemaToSchemaTypeMapping[schemaType]),
   );
 
   let passed = 0;
@@ -151,7 +151,7 @@ const validateSchemas = (schemaType, filepathOrGlob) => {
 
   console.info(
     foregroundYellow,
-    `Validating schema "${filepathOrGlob}" (${schemaType})`
+    `Validating schema "${filepathOrGlob}" (${schemaType})`,
   );
 
   files.forEach((file) => {
@@ -167,7 +167,7 @@ const validateSchemas = (schemaType, filepathOrGlob) => {
   console.log(
     `\n${foregroundGreen} - ${foregroundRed}`,
     `Passed: ${passed}`,
-    `Failed: ${failed}\n---\n`
+    `Failed: ${failed}\n---\n`,
   );
 
   return !failed;
@@ -176,10 +176,10 @@ const validateSchemas = (schemaType, filepathOrGlob) => {
 if (esMain(import.meta)) {
   yargs(hideBin(process.argv))
     .usage(
-      `Usage: ./scripts/validate-schemas.js <schema-type> <schema-file-or-folder>`
+      `Usage: ./scripts/validate-schemas.js <schema-type> <schema-file-or-folder>`,
     )
     .example(
-      "./scripts/validate-schemas.js submission_v2 /examples/payload_v2/surveyresponse_0_0_3.json"
+      "./scripts/validate-schemas.js submission_v2 /examples/payload_v2/surveyresponse_0_0_3.json",
     )
     .command(
       "$0",
@@ -187,7 +187,7 @@ if (esMain(import.meta)) {
       (opt) => {
         opt.positional("schema-type", {
           describe: `The type of schema to use for validation. One of: ${Object.keys(
-            baseSchemaToSchemaTypeMapping
+            baseSchemaToSchemaTypeMapping,
           )}`,
         });
         opt.positional("schema-file-or-folder", {
@@ -210,7 +210,7 @@ if (esMain(import.meta)) {
           if (!(sType in baseSchemaToSchemaTypeMapping)) {
             console.error(
               foregroundRed,
-              `Invalid schema type ${sType}. Schema type must be one of:`
+              `Invalid schema type ${sType}. Schema type must be one of:`,
             );
             console.dir(Object.keys(baseSchemaToSchemaTypeMapping));
             console.log(`Help: ./scripts/validate-schemas.js --help`);
@@ -224,7 +224,7 @@ if (esMain(import.meta)) {
         if (anyFailed) {
           process.exit(1);
         }
-      }
+      },
     )
     .wrap(null)
     .parse();
