@@ -1,0 +1,36 @@
+{
+    "case_id": "823aef08-55ec-4211-a9e4-c99036d4d119",
+    "tx_id": "1030d361-4226-4d78-af75-9607e1331896",
+    "type": "uk.gov.ons.edc.eq:surveyresponse",
+    "version": "v2",
+    "data_version": "0.0.3",
+    "origin": "uk.gov.ons.edc.eq",
+    "collection_exercise_sid": "5a8a75e4-dd9f-4fd5-b802-e53e9e593f85",
+    "flushed": false,
+    "submitted_at": "2026-06-17T10:33:58+00:00",
+    "launch_language_code": "en",
+    "survey_metadata": {
+        "survey_id": "census",
+        "user_id": "UNKNOWN",
+        "period_id": "2027",
+        "display_address": "123 Credibility Street, Newtown, NT108XG",
+        "ru_ref": "uprn:00001",
+        "questionnaire_id": "1234567890",
+        "form_type": "H",
+        "case_type": "HH"
+    },
+    "schema_name": "census_household_gb_eng",
+    "data": {
+        "answers": [
+            { "answer_id": "do-you-usually-live-here-answer", "value": "No, I don\u2019t usually live here" },
+            { "answer_id": "who-else-lives-here-answer-exclusive", "value": ["None of these apply, no-one usually lives here"] },
+            { "answer_id": "any-more-people-living-here-answer", "value": "No, I do not need to add anyone" },
+            { "answer_id": "any-visitors-answer-exclusive", "value": ["There are no visitors staying overnight here on Sunday {census_date}"] }
+        ],
+        "lists": []
+    },
+    "channel": "rh",
+    "region_code": "GB-ENG",
+    "started_at": "2026-06-17T10:33:35.116027+00:00",
+    "submission_language_code": "en"
+}
