@@ -73,18 +73,18 @@ The data property must adhere to the [Census Survey Metadata][census_survey_meta
 
 ##### Census Survey Metadata
 
-| **Property**         | **Definition**                                                                                                     |
+| **Property**         | **Definition**                                                                                                                                 |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 | **case_type**        | The type of case (e.g. "HH", "HI", "CE" or "SPG"). **NOTE:** See "Schema Selection Fields" reference above to `TB0028`                         |
 | **form_type**        | The particular predefined `form_type` for the case (e.g. "H", "I" or "C"). **NOTE:** See "Schema Selection Fields" reference above to `TB0028` |
-| **display_address**  | A mandatory string containing the case's address to be displayed                                                   |
-| **period_id**        | A mandatory string representing the recognised time period for the collection exercise (e.g. "2027" or "2031")     |
-| **ru_ref**           | The reporting unit reference, for example a case's UPRN or other address identifier                                |
-| **user_id**          | An mandatory id assigned by the respondent management system, for example representing a Contact Centre operative |
-| **questionnaire_id** | The questionnaire id for the case                                                                                  |    
+| **display_address**  | A mandatory string containing the case's address to be displayed                                                                               |
+| **period_id**        | A mandatory string representing the recognised time period for the collection exercise (e.g. "2027" or "2031")                                 |
+| **ru_ref**           | The reporting unit reference, for example a case's UPRN or other address identifier                                                            |
+| **user_id**          | An mandatory id assigned by the respondent management system, for example representing a Contact Centre operative                              |
+| **questionnaire_id** | The questionnaire id for the case                                                                                                              |    
 
 For a list of required fields please view [survey metadata definition schema](../schemas/common/survey_metadata.json#L53).
-An example of a valid schema can be found in examples, payload_v2, [launch_jwt_census](../examples/rm_to_eq_runner/payload_v2/launch_jwt_census.json)
+An example of a valid schema can be found in [launch_jwt_census](../examples/rm_to_eq_runner/payload_v2/launch_jwt_census.json)
 
 ## An example JSON claim for a Census survey
 
