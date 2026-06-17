@@ -4,20 +4,14 @@
   "title": "Survey Metadata Definitions",
   "type": "object",
   "$defs": {
-    "business_metadata": {
-      "description": "The metadata properties that can be for business surveys.",
+    "census_metadata": {
+      "description": "The metadata properties that can be for census surveys.",
       "properties": {
-        "case_ref": {
-          "$ref": "definitions.json#/case_ref"
-        },
         "case_type": {
           "$ref": "definitions.json#/case_type"
         },
         "display_address": {
           "$ref": "definitions.json#/display_address"
-        },
-        "employment_date": {
-          "$ref": "definitions.json#/employment_date"
         },
         "form_type": {
           "$ref": "definitions.json#/form_type"
@@ -25,23 +19,8 @@
         "period_id": {
           "$ref": "definitions.json#/period_id"
         },
-        "period_str": {
-          "$ref": "definitions.json#/period_str"
-        },
-        "ref_p_end_date": {
-          "$ref": "definitions.json#/ref_p_end_date"
-        },
-        "ref_p_start_date": {
-          "$ref": "definitions.json#/ref_p_start_date"
-        },
-        "ru_name": {
-          "$ref": "definitions.json#/ru_name"
-        },
         "ru_ref": {
           "$ref": "definitions.json#/ru_ref"
-        },
-        "trad_as": {
-          "$ref": "definitions.json#/trad_as"
         },
         "user_id": {
           "$ref": "definitions.json#/user_id"
@@ -49,74 +28,24 @@
         "survey_id": {
           "$ref": "definitions.json#/survey_id"
         },
-        "sds_dataset_id": {
-          "$ref": "definitions.json#/sds_dataset_id"
+        "questionnaire_id": {
+          "$ref": "definitions.json#/questionnaire_id"
         }
       },
       "required": [
-        "ru_name",
         "user_id",
         "period_id",
         "form_type",
         "ru_ref",
-        "survey_id"
+        "display_address",
+        "case_type"
       ]
-    },
-    "adhoc_metadata": {
-      "description": "The metadata properties that can be for ad-hoc surveys.",
-      "properties": {
-        "case_ref": {
-          "$ref": "definitions.json#/case_ref"
-        },
-        "qid": {
-          "$ref": "definitions.json#/qid"
-        },
-        "BLOOD_TEST_BARCODE": {
-          "$ref": "definitions.json#/blood_test_barcode"
-        },
-        "SWAB_TEST_BARCODE": {
-          "$ref": "definitions.json#/swab_test_barcode"
-        },
-        "PARTICIPANT_ID": {
-          "$ref": "definitions.json#/participant_id"
-        },
-        "PARTICIPANT_WINDOW_ID": {
-          "$ref": "definitions.json#/participant_window_id"
-        },
-        "TEST_QUESTIONS": {
-          "$ref": "definitions.json#/test_questions"
-        },
-        "COLLEX_OPEN_DATE": {
-          "$ref": "definitions.json#/collex_open_date"
-        },
-        "COLLEX_CLOSE_DATE": {
-          "$ref": "definitions.json#/collex_close_date"
-        },
-        "FIRST_NAME": {
-          "$ref": "definitions.json#/first_name"
-        },
-        "WINDOW_START_DATE": {
-          "$ref": "definitions.json#/iso_8601_date",
-          "description": "The ISO 8601 date of COLLEX_OPEN_DATE"
-        },
-        "WINDOW_CLOSE_DATE": {
-          "$ref": "definitions.json#/iso_8601_date",
-          "description": "The ISO 8601 date of COLLEX_CLOSE_DATE"
-        },
-        "PORTAL_ID": {
-          "$ref": "definitions.json#/portal_id"
-        }
-      },
-      "required": ["qid", "PARTICIPANT_WINDOW_ID", "PORTAL_ID"]
     },
     "survey_metadata_data": {
       "description": "An object that holds metadata about the survey.",
-      "oneOf": [
+      "anyOf": [
         {
-          "$ref": "#/$defs/business_metadata"
-        },
-        {
-          "$ref": "#/$defs/adhoc_metadata"
+          "$ref": "#/$defs/census_metadata"
         }
       ]
     }
@@ -128,11 +57,6 @@
         "$ref": "#/$defs/survey_metadata_data"
       }
     ],
-    "properties": {
-      "survey_id": {
-        "$ref": "definitions.json#/survey_id"
-      }
-    },
     "unevaluatedProperties": false,
     "required": ["survey_id"]
   },
@@ -146,8 +70,7 @@
       "receipting_keys": {
         "type": "array",
         "items": {
-          "type": "string",
-          "enum": ["qid"]
+          "type": "string"
         },
         "minItems": 1
       }

@@ -7,14 +7,14 @@
     "account_service_url": {
       "$ref": "common/definitions.json#/account_service_url"
     },
+    "account_service_log_out_url": {
+      "$ref": "common/definitions.json#/account_service_log_out_url"
+    },
     "case_id": {
       "$ref": "common/definitions.json#/case_id"
     },
     "channel": {
       "$ref": "common/definitions.json#/channel"
-    },
-    "cir_instrument_id": {
-      "$ref": "common/definitions.json#/cir_instrument_id"
     },
     "collection_exercise_sid": {
       "$ref": "common/definitions.json#/collection_exercise_sid"
@@ -56,6 +56,12 @@
     },
     "version": {
       "$ref": "common/definitions.json#/payload_version_v2"
+    },
+    "survey": {
+      "$ref": "common/definitions.json#/survey"
+    },
+    "eq_id": {
+      "$ref": "common/definitions.json#/eq_id"
     }
   },
   "required": [
@@ -77,9 +83,6 @@
     },
     {
       "required": ["schema_url"]
-    },
-    {
-      "required": ["cir_instrument_id"]
     }
   ]
 }

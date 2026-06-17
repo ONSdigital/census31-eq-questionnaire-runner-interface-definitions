@@ -31,17 +31,17 @@
     "format": "date",
     "examples": ["2019-08-21"]
   },
-  "account_service_logout_url": {
-    "type": "string",
-    "format": "uri",
-    "description": "The base URL of the calling service used to launch EQ.",
-    "examples": ["https://surveys.ons.gov.uk/logout"]
-  },
   "account_service_url": {
     "type": "string",
     "format": "uri",
     "description": "The base URL of the calling service used to launch EQ.",
-    "examples": ["https://surveys.ons.gov.uk"]
+    "examples": ["https://census.ons.gov.uk"]
+  },
+  "account_service_log_out_url": {
+    "type": "string",
+    "format": "uri",
+    "description": "The URL of the calling service used to log the use out of the Response Management System.",
+    "examples": ["https://census.gov.uk/logout"]
   },
   "case_id": {
     "$ref": "#/$defs/uuid",
@@ -121,7 +121,7 @@
   "period_id": {
     "$ref": "#/non_empty_string",
     "description": "A string representing the business area recognised time period for the collection exercise.",
-    "examples": ["2019", "JAN2019"]
+    "examples": ["2027", "2031"]
   },
   "period_str": {
     "$ref": "#/non_empty_string",
@@ -166,10 +166,8 @@
   },
   "ru_ref": {
     "type": "string",
-    "description": "The reporting unit reference with the check letter appended.",
-    "minLength": 12,
-    "pattern": "^[a-zA-Z0-9]+[A-Za-z]+$",
-    "examples": ["34942807969m"]
+    "description": "The reporting unit reference.",
+    "examples": ["uprn:00001"]
   },
   "schema_name": {
     "type": "string",
@@ -207,9 +205,25 @@
   "survey_id": {
     "type": "string",
     "description": "The ONS id of the survey derived from the inquiry code already in use for that survey.",
-    "pattern": "^[0-9a-z]+$",
     "minLength": 1,
-    "examples": ["001"]
+    "examples": ["009", "census"]
+  },
+  "questionnaire_id": {
+    "type": "string",
+    "description": "An identifier from RM",
+    "minLength": 1
+  },
+  "survey": {
+    "type": "string",
+    "description": "The ONS survey name used in Census 2027 questionnaire schema resolution.",
+    "minLength": 1,
+    "examples": ["census"]
+  },
+  "eq_id": {
+    "type": "string",
+    "description": "Legacy portion identifier of an ONS questionnaire schema.",
+    "minLength": 1,
+    "examples": ["census"]
   },
   "trad_as": {
     "$ref": "#/non_empty_string",

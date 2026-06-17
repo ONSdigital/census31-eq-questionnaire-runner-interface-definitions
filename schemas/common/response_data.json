@@ -306,6 +306,9 @@
         "type": "string",
         "description": "The number of times the feedback has been submitted.",
         "pattern": "^[0-9]+$"
+      },
+      "survey_metadata": {
+        "$ref": "survey_metadata.json#/survey_metadata"
       }
     },
     "additionalProperties": false,
@@ -323,11 +326,13 @@
       "feedback_text": {
         "$ref": "definitions.json#/non_empty_string",
         "description": "The feedback text."
+      },
+      "survey_metadata": {
+        "$ref": "survey_metadata.json#/survey_metadata"
       }
     },
     "additionalProperties": false,
-    "unevaluatedProperties": false,
-    "required": ["feedback_rating"]
+    "unevaluatedProperties": false
   },
   "user_research_response": {
     "type": "object",
