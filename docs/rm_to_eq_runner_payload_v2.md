@@ -11,7 +11,7 @@ This document defines the JWT payload structure for v2. This often referred to a
 
 ### Mandatory Fields
 
-The following are top-level mandatory metadata properties required to authenticate a user and launch a questionnaire schema in EQ Runner, they do not appear in individual survey metadata definitions.
+The following are top-level mandatory metadata properties are required to authenticate a user and launch a questionnaire schema in EQ Runner, they do not appear in individual survey metadata definitions.
 
 | **Property**                | **Definition**                                                                                                                                                                                          |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
