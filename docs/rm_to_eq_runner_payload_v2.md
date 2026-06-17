@@ -36,8 +36,8 @@ The schema used by an EQ Runner can be selected one of three ways.
 |------------------------|---------------------------------------------------------------------------------------------------------------------|
 | **schema_url**         | A URL for a remote survey JSON. This claim is used to tell EQ Runner to load the schema JSON from a remote location |
 | **schema_name**        | The name of the schema to launch. Must be present in [Schemas Repo][schemas_repo]                                   |
-| cir_instrument_id      | **deprecated**: The UUID of the collection instrument to launch from the Collection Instrument Registry             |
 | **TBA:** Census 2027   | A combination of attributes allowing EQ Runner to resolve to the predefined schema naming convention for Census     |  
+| (cir_instrument_id)    | **deprecated**: The UUID of the collection instrument to launch from the Collection Instrument Registry             |
 
 ### Optional Fields
 
@@ -47,7 +47,7 @@ EQ Runner can optionally accept the following keys.
 | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **channel**             | The channel (client) from which the questionnaire was launched                                                                                                                                                                                             |
 | **language_code**       | Language code identifier, used to change language displayed. Format as per ISO-639-1 (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) e.g. "en" for English; "cy" for Welsh. This parameter is currently optional; the default is "en"              |
-| **region_code**         | The Region Code of the questionnaire response. Format as per ISO 3166-2 (https://en.wikipedia.org/wiki/ISO_3166-2:GB) i.e. `GB-ENG` / `GB-WLS` / `GB-NIR`. This is used in tactical legacy solutions for Individual Response, Email and Feedback features. |
+| **region_code**         | The Region Code of the questionnaire response. Format as per ISO 3166-2 (https://en.wikipedia.org/wiki/ISO_3166-2:GB) i.e. `GB-ENG` / `GB-WLS` / `GB-NIR` |
 | **survey_metadata**     | See: [Survey Metadata Fields][survey_metadata_fields]                                                                                                                                                                                                      |
 
 ### Survey Metadata Fields
@@ -56,7 +56,7 @@ In addition to the above [Required Runner Fields][required_runner_fields], some 
 
 | **Property**        | **Child Property**   | **Definition**                                                                                                                                                                                   |
 | ------------------- |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **survey_metadata** | JSON Object `{...}` | A mandatory n object to hold data about the survey and any additional keys required for receipting.                                                                                              |
+| **survey_metadata** | JSON Object `{...}` | A mandatory object to hold data about the survey and any additional keys required for receipting.                                                                                              |
 |                     | **receipting_keys**  | An optional array of key names from the `survey_metadata.data` spec below that are required for downstream processing. The key names defined here must exist in `survey_metadata.data` property. |
 |                     | **data**             | See: [Data Property][survey_metadata_data_property]                                                                                                                                              |
 
