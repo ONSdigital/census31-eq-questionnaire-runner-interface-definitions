@@ -33,11 +33,11 @@ The schema selection field determine the mechanism used by EQ Runner to load the
 The schema used by an EQ Runner can be selected one of three ways.
 
 | **Property**           | **Definition**                                                                                                      |
-|------------------------|---------------------------------------------------------------------------------------------------------------------|
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **schema_url**         | A URL for a remote survey JSON. This claim is used to tell EQ Runner to load the schema JSON from a remote location |
-| **schema_name**        | The name of the schema to launch. Must be present in [Schemas Repo][schemas_repo]                                   |
-| **TBA:** Census 2027   | A combination of attributes allowing EQ Runner to resolve to the predefined schema naming convention for Census     |  
-| (cir_instrument_id)    | **deprecated**: The UUID of the collection instrument to launch from the Collection Instrument Registry             |
+| **schema_name**       | The name of the schema to launch (without a `.json` file extension). The schemas supported can be found in the [Census 2031 Schemas][census31_schemas_repo]. For example `census_household_gb_eng`                                                                                                                                                                             |
+| **cir_instrument_id** | **deprecated**: The UUID of the collection instrument to launch from the Collection Instrument Registry. This will be removed under `CTE-66`                                                                                                                                                                                                          |
+| **TBC: [EQ_TB0028]**  | A combination of attributes allowing EQ Runner to resolve to the schema naming convention.<br />For completeness, for Census 2021 the attributes used were `survey`, `form_type` and `region_code`.<br />For Census 2027 this will be progress under EQ Technical Backlog item `TB0028` in collaboration with dependent services |  
 
 ### Optional Fields
 
@@ -76,9 +76,9 @@ The data property must adhere to the [Census Survey Metadata][census_survey_meta
 ##### Census Survey Metadata
 
 | **Property**         | **Definition**                                                                                                     |
-|----------------------|--------------------------------------------------------------------------------------------------------------------|
-| **case_type**        | The type of case (e.g. "HH", "HI", "CE" or "SPG")                                                                  |
-| **form_type**        | The particular predefined `form_type` for the case (e.g. "H", "I" or "C")                                          |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| **case_type**        | The type of case (e.g. "HH", "HI", "CE" or "SPG"). **NOTE:** See "Schema Selection Fields" reference above to `TB0028`                         |
+| **form_type**        | The particular predefined `form_type` for the case (e.g. "H", "I" or "C"). **NOTE:** See "Schema Selection Fields" reference above to `TB0028` |
 | **display_address**  | A mandatory string containing the case's address to be displayed                                                   |
 | **period_id**        | A mandatory string representing the recognised time period for the collection exercise (e.g. "2027" or "2031")     |
 | **ru_ref**           | The reporting unit reference, for example a case's UPRN or other address identifier                                |
@@ -124,7 +124,7 @@ An example of a valid schema can be found in examples, payload_v2, [launch_jwt_c
 ```
 
 [jwt_profile]: jwt_profile.md "JWT Profile Definition"
-[schemas_repo]: https://github.com/ONSdigital/census31-eq-questionnaire-schemas/tree/main/schemas "Schemas Repo"
+[census31_schemas_repo]: https://github.com/ONSdigital/census31-eq-questionnaire-schemas/tree/main/schemas/en "Census 2031 Schemas"
 [required_runner_fields]: #required-fields "Required Fields"
 [survey_metadata_fields]: #survey-metadata-fields "Survey Metadata Fields"
 [survey_metadata_data_property]: #data-property "Survey Metadata Data Property Definition"
