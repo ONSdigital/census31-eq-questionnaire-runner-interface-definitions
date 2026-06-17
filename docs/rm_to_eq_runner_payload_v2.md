@@ -9,9 +9,9 @@ This document defines the JWT payload structure for v2. This often referred to a
 
 ## Schema Definition
 
-### Required Fields
+### Mandatory Fields
 
-The following metadata properties are always required for the EQ Runner, they do not appear in individual survey metadata definitions.
+The following are top-level mandatory metadata properties required to authenticate a user and launch a questionnaire schema in EQ Runner, they do not appear in individual survey metadata definitions.
 
 | **Property**                | **Definition**                                                                                                                                                                                          |
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -28,9 +28,7 @@ The following metadata properties are always required for the EQ Runner, they do
 
 #### Schema Selection Fields
 
-The schema selection field determine the mechanism used by EQ Runner to load the questionnaire schema JSON.
-
-The schema used by an EQ Runner can be selected one of three ways.
+One of the following top-level properties _must_ be included to allow EQ Runner to load a questionnaire schema.
 
 | **Property**           | **Definition**                                                                                                      |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,7 +39,7 @@ The schema used by an EQ Runner can be selected one of three ways.
 
 ### Optional Fields
 
-EQ Runner can optionally accept the following keys.
+EQ Runner can optionally accept the following top-level properties.
 
 | **Property**            | **Definition**                                                                                                                                                                                                                                |
 | ----------------------- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
