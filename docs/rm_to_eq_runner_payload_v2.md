@@ -108,7 +108,7 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
     "survey_metadata": {
         "data": {
             "case_type": "HH",
-            "display_address": "123 Credibility Street, Newtown, NT108XG",
+            "display_address": "15 Credibility Street, Bristol, BS7 8ES",
             "form_type": "H",
             "period_id": "2027",
             "questionnaire_id": "1234567890",
