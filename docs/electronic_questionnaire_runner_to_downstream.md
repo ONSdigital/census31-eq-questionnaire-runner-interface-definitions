@@ -21,9 +21,9 @@ Additional receipting metadata may be added, which are defined by `survey_metada
 
 ```json
 {
-	"tx_id": "6fcf3ddc-a685-4aa1-8fcf-3e38aed5cbf7",
-	"case_id": "2859a8b5-34c3-4603-aad9-78198d8341c9",
-	"qid": "bdf7dff2-1d73-4b97-bd2d-91f2e53160b9"
+	"tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
+	"case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
+	"questionnaire_id": "1234567890"
 }
 ```
 

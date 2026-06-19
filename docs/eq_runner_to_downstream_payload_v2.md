@@ -33,11 +33,11 @@ In additional to the field above, a schema selection field will be provided whic
 
 One of the following must be present:
 
-| **Property**          | **Definition**                                                                   |
-|-----------------------|----------------------------------------------------------------------------------|
-| **schema_url**        | The URL to the remote survey JSON.                                             |
-| **schema_name**       | The name of the schema launched. Will be present in [Schemas Repo][schemas_repo] |
-| **cir_instrument_id** | The UUID of the collection instrument launched from the registry                 |
+| **Property**          | **Definition**                                                                                                         |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------|
+| **schema_url**        | The URL to the remote survey JSON.                                                                                     |
+| **schema_name**       | The name of the schema launched. Will be present in [Schemas Repo][schemas_repo]                                       |
+| **cir_instrument_id** | **deprecated**: The UUID of the collection instrument launched from the registry. This will be removed under `CTE-66` |
 
 ### Optional Fields
 
@@ -54,12 +54,12 @@ EQ Runner will pass the following keys if a value for them exists.
 ```json
 {
   "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
-  "tx_id": "65781548-e799-48c2-81fb-46122167c1d4",
+  "tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
   "type": "uk.gov.ons.edc.eq:surveyresponse",
   "version": "v2",
   "data_version": "0.0.3",
   "origin": "uk.gov.ons.edc.eq",
-  "collection_exercise_sid": "ca141e55-7365-422a-a257-5373fb84b100",
+  "collection_exercise_sid": "77d00da0-9245-40a3-9219-a9f860066167",
   "flushed": false,
   "submitted_at": "2026-06-19T14:06:27+00:00",
   "launch_language_code": "en",

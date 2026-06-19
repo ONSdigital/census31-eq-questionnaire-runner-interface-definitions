@@ -92,9 +92,9 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
 {
     "account_service_log_out_url": "http://localhost:8000/logout",
     "account_service_url": "http://localhost:8000",
-    "case_id": "823aef08-55ec-4211-a9e4-c99036d4d119",
+    "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
     "channel": "rh",
-    "collection_exercise_sid": "5a8a75e4-dd9f-4fd5-b802-e53e9e593f85",
+    "collection_exercise_sid": "77d00da0-9245-40a3-9219-a9f860066167",
     "eq_id": "census",
     "exp": 1781699607,
     "iat": 1781692407,
@@ -114,9 +114,10 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
             "questionnaire_id": "1234567890",
             "ru_ref": "uprn:00001",
             "user_id": "UNKNOWN"
-        }
+        },
+        "receipting_keys": ["questionnaire_id"]
     },
-    "tx_id": "1030d361-4226-4d78-af75-9607e1331896",
+    "tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
     "version": "v2"
 }
 ```
