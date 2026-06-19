@@ -35,7 +35,7 @@ One of the following top-level properties _must_ be included to allow EQ Runner 
 | **schema_url**         | A URL for a remote survey JSON. This claim is used to tell EQ Runner to load the schema JSON from a remote location |
 | **schema_name**       | The name of the schema to launch (without a `.json` file extension). The schemas supported can be found in the [Census 2031 Schemas][census31_schemas_repo]. For example `census_household_gb_eng`                                                                                                                                                                             |
 | **cir_instrument_id** | **deprecated**: The UUID of the collection instrument to launch from the Collection Instrument Registry. This will be removed under `CTE-66`                                                                                                                                                                                                          |
-| **TBC: [EQ_TB0028]**  | A combination of attributes allowing EQ Runner to resolve to the schema naming convention.<br />For completeness, for Census 2021 the attributes used were `survey`, `form_type` and `region_code`.<br />For Census 2027 this will be progress under EQ Technical Backlog item `TB0028` in collaboration with dependent services |  
+| **TBC: [EQ_TB0028]**  | A combination of attributes allowing EQ Runner to resolve to a schema name.<br />For completeness, the attributes used for Census 2021 were `survey`, `form_type` and `region_code`.<br />For Census 2027 this will be progressed under EQ Technical Backlog item `TB0028` in collaboration with dependent services |  
 
 ### Optional Fields
 
