@@ -47,7 +47,6 @@ EQ Runner can optionally accept the following top-level properties.
 | **language_code**               | Language code identifier, used to change language displayed. Format as per ISO-639-1 (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) e.g. "en" for English; "cy" for Welsh. This parameter is currently optional; the default is "en" |
 | **region_code**                 | The Region Code of the questionnaire response. Format as per ISO 3166-2 (https://en.wikipedia.org/wiki/ISO_3166-2:GB) i.e. `GB-ENG` / `GB-WLS` / `GB-NIR`. **NOTE:** See "Schema Selection Fields" reference above to `TB0028`                |
 | **survey_metadata**             | See: [Survey Metadata Fields][survey_metadata_fields]                                                                                                                                                                                         |
-| **account_service_log_out_url** | The calling service's logout URL. This is intended to destroy the user's session in the Response Managment System.                                                                                                                            |
 
 ### Survey Metadata Fields
 
@@ -91,7 +90,6 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
 
 ```json
 {
-    "account_service_log_out_url": "http://localhost:8000/logout",
     "account_service_url": "http://localhost:8000",
     "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
     "channel": "rh",

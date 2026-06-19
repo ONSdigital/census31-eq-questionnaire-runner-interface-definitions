@@ -7,9 +7,6 @@
     "account_service_url": {
       "$ref": "common/definitions.json#/account_service_url"
     },
-    "account_service_log_out_url": {
-      "$ref": "common/definitions.json#/account_service_log_out_url"
-    },
     "case_id": {
       "$ref": "common/definitions.json#/case_id"
     },
@@ -62,6 +59,9 @@
     },
     "eq_id": {
       "$ref": "common/definitions.json#/eq_id"
+    },
+    "account_service_log_out_url": {
+      "$ref": "common/definitions.json#/account_service_log_out_url"
     }
   },
   "required": [
