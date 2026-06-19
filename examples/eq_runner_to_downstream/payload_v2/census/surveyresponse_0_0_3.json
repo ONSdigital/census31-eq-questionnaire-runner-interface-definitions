@@ -1,135 +1,452 @@
 {
-    "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
-    "tx_id": "65781548-e799-48c2-81fb-46122167c1d4",
-    "type": "uk.gov.ons.edc.eq:surveyresponse",
-    "version": "v2",
-    "data_version": "0.0.3",
-    "origin": "uk.gov.ons.edc.eq",
-    "collection_exercise_sid": "ca141e55-7365-422a-a257-5373fb84b100",
-    "flushed": false,
-    "submitted_at": "2026-06-19T14:06:27+00:00",
-    "launch_language_code": "en",
-    "survey_metadata": {
-        "survey_id": "census",
-        "user_id": "UNKNOWN",
-        "period_id": "2027",
-        "display_address": "123 Credibility Street, Newtown, NT108XG",
-        "form_type": "H",
-        "questionnaire_id": "1234567890",
-        "case_type": "HH",
-        "ru_ref": "uprn:00001"
-    },
-    "schema_name": "census_household_gb_eng",
-    "data": {
-        "answers": [
-            { "answer_id": "first-name", "value": "Bob", "list_item_id": "tjwCXg" },
-            { "answer_id": "last-name", "value": "Biscuit", "list_item_id": "tjwCXg" },
-            { "answer_id": "first-name", "value": "Sally", "list_item_id": "obJDFL" },
-            { "answer_id": "last-name", "value": "Sardine", "list_item_id": "obJDFL" },
-            { "answer_id": "first-name", "value": "Fred", "list_item_id": "EsZBbD" },
-            { "answer_id": "last-name", "value": "Fishfinger", "list_item_id": "EsZBbD" },
-            { "answer_id": "first-name", "value": "Gary", "list_item_id": "THaczE" },
-            { "answer_id": "last-name", "value": "Grape", "list_item_id": "THaczE" },
-            { "answer_id": "do-you-usually-live-here-answer", "value": "Yes, I usually live here" },
-            { "answer_id": "who-else-lives-here-answer", "value": ["Family members and partners"] },
-            { "answer_id": "people-living-here-answer", "value": "No, I do not need to add anyone" },
-            { "answer_id": "any-more-people-living-here-answer", "value": "No, I do not need to add anyone" },
-            { "answer_id": "any-visitors-answer-exclusive", "value": ["There are no visitors staying overnight here on Sunday {census_date}"] },
-            {
-                "answer_id": "relationship-answer",
-                "value": [
-                    { "list_item_id": "tjwCXg", "to_list_item_id": "obJDFL", "relationship": "Husband or wife" },
-                    { "list_item_id": "tjwCXg", "to_list_item_id": "EsZBbD", "relationship": "Son or daughter" },
-                    { "list_item_id": "tjwCXg", "to_list_item_id": "THaczE", "relationship": "Son or daughter" },
-                    { "list_item_id": "obJDFL", "to_list_item_id": "EsZBbD", "relationship": "Son or daughter" },
-                    { "list_item_id": "obJDFL", "to_list_item_id": "THaczE", "relationship": "Son or daughter" },
-                    { "list_item_id": "EsZBbD", "to_list_item_id": "THaczE", "relationship": "Brother or sister" }
-                ]
-            },
-            { "answer_id": "accommodation-type-answer", "value": "Whole house or bungalow" },
-            { "answer_id": "type-of-house-answer", "value": "Semi-detached" },
-            { "answer_id": "rooms-shared-with-another-household-answer", "value": "Yes" },
-            { "answer_id": "number-of-bedrooms-answer", "value": 4 },
-            { "answer_id": "central-heating-answer", "value": ["Mains gas"] },
-            { "answer_id": "own-or-rent-answer", "value": "Owns outright" },
-            { "answer_id": "number-of-vehicles-answer", "value": "2" },
-            { "answer_id": "confirm-who-is-answering-answer", "value": "Yes, I am", "list_item_id": "tjwCXg" },
-            { "answer_id": "date-of-birth-answer", "value": "1970-01-01", "list_item_id": "tjwCXg" },
-            { "answer_id": "confirm-age-answer", "value": "Yes, I am {age} old", "list_item_id": "tjwCXg" },
-            { "answer_id": "sex-answer", "value": "Male", "list_item_id": "tjwCXg" },
-            { "answer_id": "marital-or-civil-partnership-status-answer", "value": "Married", "list_item_id": "tjwCXg" },
-            { "answer_id": "sex-of-current-spouse-answer", "value": "Someone of the opposite sex", "list_item_id": "tjwCXg" },
-            { "answer_id": "another-address-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "in-education-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "country-of-birth-answer", "value": "Wales", "list_item_id": "tjwCXg" },
-            { "answer_id": "location-one-year-ago-answer", "value": "{household_address}", "list_item_id": "tjwCXg" },
-            { "answer_id": "national-identity-answer", "value": ["British"], "list_item_id": "tjwCXg" },
-            { "answer_id": "ethnic-group-answer", "value": "White", "list_item_id": "tjwCXg" },
-            { "answer_id": "white-ethnic-group-answer", "value": "English, Welsh, Scottish, Northern Irish or British", "list_item_id": "tjwCXg" },
-            { "answer_id": "religion-answer", "value": "No religion", "list_item_id": "tjwCXg" },
-            { "answer_id": "main-language-answer", "value": "English", "list_item_id": "tjwCXg" },
-            { "answer_id": "passports-answer", "value": ["United Kingdom"], "list_item_id": "tjwCXg" },
-            { "answer_id": "health-answer", "value": "Good", "list_item_id": "tjwCXg" },
-            { "answer_id": "health-conditions-or-illnesses-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "look-after-or-support-others-answer", "value": "Yes, 10 to 19 hours a week", "list_item_id": "tjwCXg" },
-            { "answer_id": "sexual-orientation-answer", "value": "Straight or Heterosexual", "list_item_id": "tjwCXg" },
-            { "answer_id": "gender-identity-answer", "value": "Yes", "list_item_id": "tjwCXg" },
-            { "answer_id": "apprenticeship-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "degree-level-or-above-answer", "value": "Yes", "list_item_id": "tjwCXg" },
-            { "answer_id": "nvq-level-answer", "value": ["NVQ level 3 or equivalent", "NVQ level 1 or equivalent"], "list_item_id": "tjwCXg" },
-            { "answer_id": "gcse-answer", "value": ["5 or more GCSEs grade A* to C or 9 to 4"], "list_item_id": "tjwCXg" },
-            { "answer_id": "armed-forces-answer-exclusive", "value": ["No"], "list_item_id": "tjwCXg" },
-            { "answer_id": "employment-status-last-seven-days-answer-exclusive", "value": ["None of these apply"], "list_item_id": "tjwCXg" },
-            { "answer_id": "not-employed-status-last-seven-days-answer", "value": ["Retired"], "list_item_id": "tjwCXg" },
-            { "answer_id": "looking-for-work-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "about-to-start-job-answer", "value": "No", "list_item_id": "tjwCXg" },
-            { "answer_id": "ever-worked-answer", "value": "No, have never worked", "list_item_id": "tjwCXg" },
-            { "answer_id": "confirm-who-is-answering-answer", "value": "No, I am answering on their behalf", "list_item_id": "obJDFL" },
-            { "answer_id": "date-of-birth-answer", "value": "1971-02-02", "list_item_id": "obJDFL" },
-            { "answer_id": "confirm-age-answer", "value": "Yes, {person_name} is {age} old", "list_item_id": "obJDFL" },
-            { "answer_id": "sex-answer", "value": "Female", "list_item_id": "obJDFL" },
-            { "answer_id": "marital-or-civil-partnership-status-answer", "value": "Married", "list_item_id": "obJDFL" },
-            { "answer_id": "sex-of-current-spouse-answer", "value": "Someone of the opposite sex", "list_item_id": "obJDFL" },
-            { "answer_id": "another-address-answer", "value": "No", "list_item_id": "obJDFL" },
-            { "answer_id": "in-education-answer", "value": "Yes", "list_item_id": "obJDFL" },
-            { "answer_id": "term-time-location-answer", "value": "{household_address}", "list_item_id": "obJDFL" },
-            { "answer_id": "country-of-birth-answer", "value": "Wales", "list_item_id": "obJDFL" },
-            { "answer_id": "location-one-year-ago-answer", "value": "Same as {first_person_possessive} address one year ago", "list_item_id": "obJDFL" },
-            { "answer_id": "national-identity-answer", "value": ["Welsh"], "list_item_id": "obJDFL" },
-            { "answer_id": "ethnic-group-answer", "value": "White", "list_item_id": "obJDFL" },
-            { "answer_id": "white-ethnic-group-answer", "value": "English, Welsh, Scottish, Northern Irish or British", "list_item_id": "obJDFL" },
-            { "answer_id": "religion-answer", "value": "No religion", "list_item_id": "obJDFL" },
-            { "answer_id": "main-language-answer", "value": "English", "list_item_id": "obJDFL" },
-            { "answer_id": "passports-answer", "value": ["United Kingdom"], "list_item_id": "obJDFL" },
-            { "answer_id": "health-answer", "value": "Very good", "list_item_id": "obJDFL" },
-            { "answer_id": "health-conditions-or-illnesses-answer", "value": "No", "list_item_id": "obJDFL" },
-            { "answer_id": "look-after-or-support-others-answer", "value": "Yes, 20 to 34 hours a week", "list_item_id": "obJDFL" },
-            { "answer_id": "sexual-orientation-answer", "value": "Straight or Heterosexual", "list_item_id": "obJDFL" },
-            { "answer_id": "gender-identity-answer", "value": "Yes", "list_item_id": "obJDFL" },
-            { "answer_id": "apprenticeship-answer", "value": "No", "list_item_id": "obJDFL" },
-            { "answer_id": "degree-level-or-above-answer", "value": "Yes", "list_item_id": "obJDFL" },
-            {
-                "answer_id": "nvq-level-answer",
-                "value": ["NVQ level 3 or equivalent", "NVQ level 2 or equivalent", "NVQ level 1 or equivalent"],
-                "list_item_id": "obJDFL"
-            },
-            { "answer_id": "a-level-answer", "value": ["2 or more A levels", "1 A level", "1 AS level"], "list_item_id": "obJDFL" },
-            {
-                "answer_id": "gcse-answer",
-                "value": ["5 or more GCSEs grade A* to C or 9 to 4", "Any other GCSEs", "Basic Skills course"],
-                "list_item_id": "obJDFL"
-            },
-            { "answer_id": "armed-forces-answer-exclusive", "value": ["No"], "list_item_id": "obJDFL" },
-            { "answer_id": "employment-status-last-seven-days-answer-exclusive", "value": ["None of these apply"], "list_item_id": "obJDFL" },
-            { "answer_id": "not-employed-status-last-seven-days-answer", "value": ["Studying"], "list_item_id": "obJDFL" },
-            { "answer_id": "looking-for-work-answer", "value": "No", "list_item_id": "obJDFL" },
-            { "answer_id": "about-to-start-job-answer", "value": "No", "list_item_id": "obJDFL" },
-            { "answer_id": "ever-worked-answer", "value": "No, has never worked", "list_item_id": "obJDFL" }
+  "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
+  "tx_id": "65781548-e799-48c2-81fb-46122167c1d4",
+  "type": "uk.gov.ons.edc.eq:surveyresponse",
+  "version": "v2",
+  "data_version": "0.0.3",
+  "origin": "uk.gov.ons.edc.eq",
+  "collection_exercise_sid": "ca141e55-7365-422a-a257-5373fb84b100",
+  "flushed": false,
+  "submitted_at": "2026-06-19T14:06:27+00:00",
+  "launch_language_code": "en",
+  "survey_metadata": {
+    "survey_id": "census",
+    "user_id": "UNKNOWN",
+    "period_id": "2027",
+    "display_address": "123 Credibility Street, Newtown, NT108XG",
+    "form_type": "H",
+    "questionnaire_id": "1234567890",
+    "case_type": "HH",
+    "ru_ref": "uprn:00001"
+  },
+  "schema_name": "census_household_gb_eng",
+  "data": {
+    "answers": [
+      { "answer_id": "first-name", "value": "Bob", "list_item_id": "tjwCXg" },
+      {
+        "answer_id": "last-name",
+        "value": "Biscuit",
+        "list_item_id": "tjwCXg"
+      },
+      { "answer_id": "first-name", "value": "Sally", "list_item_id": "obJDFL" },
+      {
+        "answer_id": "last-name",
+        "value": "Sardine",
+        "list_item_id": "obJDFL"
+      },
+      { "answer_id": "first-name", "value": "Fred", "list_item_id": "EsZBbD" },
+      {
+        "answer_id": "last-name",
+        "value": "Fishfinger",
+        "list_item_id": "EsZBbD"
+      },
+      { "answer_id": "first-name", "value": "Gary", "list_item_id": "THaczE" },
+      { "answer_id": "last-name", "value": "Grape", "list_item_id": "THaczE" },
+      {
+        "answer_id": "do-you-usually-live-here-answer",
+        "value": "Yes, I usually live here"
+      },
+      {
+        "answer_id": "who-else-lives-here-answer",
+        "value": ["Family members and partners"]
+      },
+      {
+        "answer_id": "people-living-here-answer",
+        "value": "No, I do not need to add anyone"
+      },
+      {
+        "answer_id": "any-more-people-living-here-answer",
+        "value": "No, I do not need to add anyone"
+      },
+      {
+        "answer_id": "any-visitors-answer-exclusive",
+        "value": [
+          "There are no visitors staying overnight here on Sunday {census_date}"
+        ]
+      },
+      {
+        "answer_id": "relationship-answer",
+        "value": [
+          {
+            "list_item_id": "tjwCXg",
+            "to_list_item_id": "obJDFL",
+            "relationship": "Husband or wife"
+          },
+          {
+            "list_item_id": "tjwCXg",
+            "to_list_item_id": "EsZBbD",
+            "relationship": "Son or daughter"
+          },
+          {
+            "list_item_id": "tjwCXg",
+            "to_list_item_id": "THaczE",
+            "relationship": "Son or daughter"
+          },
+          {
+            "list_item_id": "obJDFL",
+            "to_list_item_id": "EsZBbD",
+            "relationship": "Son or daughter"
+          },
+          {
+            "list_item_id": "obJDFL",
+            "to_list_item_id": "THaczE",
+            "relationship": "Son or daughter"
+          },
+          {
+            "list_item_id": "EsZBbD",
+            "to_list_item_id": "THaczE",
+            "relationship": "Brother or sister"
+          }
+        ]
+      },
+      {
+        "answer_id": "accommodation-type-answer",
+        "value": "Whole house or bungalow"
+      },
+      { "answer_id": "type-of-house-answer", "value": "Semi-detached" },
+      {
+        "answer_id": "rooms-shared-with-another-household-answer",
+        "value": "Yes"
+      },
+      { "answer_id": "number-of-bedrooms-answer", "value": 4 },
+      { "answer_id": "central-heating-answer", "value": ["Mains gas"] },
+      { "answer_id": "own-or-rent-answer", "value": "Owns outright" },
+      { "answer_id": "number-of-vehicles-answer", "value": "2" },
+      {
+        "answer_id": "confirm-who-is-answering-answer",
+        "value": "Yes, I am",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "date-of-birth-answer",
+        "value": "1970-01-01",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "confirm-age-answer",
+        "value": "Yes, I am {age} old",
+        "list_item_id": "tjwCXg"
+      },
+      { "answer_id": "sex-answer", "value": "Male", "list_item_id": "tjwCXg" },
+      {
+        "answer_id": "marital-or-civil-partnership-status-answer",
+        "value": "Married",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "sex-of-current-spouse-answer",
+        "value": "Someone of the opposite sex",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "another-address-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "in-education-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "country-of-birth-answer",
+        "value": "Wales",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "location-one-year-ago-answer",
+        "value": "{household_address}",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "national-identity-answer",
+        "value": ["British"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "ethnic-group-answer",
+        "value": "White",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "white-ethnic-group-answer",
+        "value": "English, Welsh, Scottish, Northern Irish or British",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "religion-answer",
+        "value": "No religion",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "main-language-answer",
+        "value": "English",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "passports-answer",
+        "value": ["United Kingdom"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "health-answer",
+        "value": "Good",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "health-conditions-or-illnesses-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "look-after-or-support-others-answer",
+        "value": "Yes, 10 to 19 hours a week",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "sexual-orientation-answer",
+        "value": "Straight or Heterosexual",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "gender-identity-answer",
+        "value": "Yes",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "apprenticeship-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "degree-level-or-above-answer",
+        "value": "Yes",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "nvq-level-answer",
+        "value": ["NVQ level 3 or equivalent", "NVQ level 1 or equivalent"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "gcse-answer",
+        "value": ["5 or more GCSEs grade A* to C or 9 to 4"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "armed-forces-answer-exclusive",
+        "value": ["No"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "employment-status-last-seven-days-answer-exclusive",
+        "value": ["None of these apply"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "not-employed-status-last-seven-days-answer",
+        "value": ["Retired"],
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "looking-for-work-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "about-to-start-job-answer",
+        "value": "No",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "ever-worked-answer",
+        "value": "No, have never worked",
+        "list_item_id": "tjwCXg"
+      },
+      {
+        "answer_id": "confirm-who-is-answering-answer",
+        "value": "No, I am answering on their behalf",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "date-of-birth-answer",
+        "value": "1971-02-02",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "confirm-age-answer",
+        "value": "Yes, {person_name} is {age} old",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "sex-answer",
+        "value": "Female",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "marital-or-civil-partnership-status-answer",
+        "value": "Married",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "sex-of-current-spouse-answer",
+        "value": "Someone of the opposite sex",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "another-address-answer",
+        "value": "No",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "in-education-answer",
+        "value": "Yes",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "term-time-location-answer",
+        "value": "{household_address}",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "country-of-birth-answer",
+        "value": "Wales",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "location-one-year-ago-answer",
+        "value": "Same as {first_person_possessive} address one year ago",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "national-identity-answer",
+        "value": ["Welsh"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "ethnic-group-answer",
+        "value": "White",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "white-ethnic-group-answer",
+        "value": "English, Welsh, Scottish, Northern Irish or British",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "religion-answer",
+        "value": "No religion",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "main-language-answer",
+        "value": "English",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "passports-answer",
+        "value": ["United Kingdom"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "health-answer",
+        "value": "Very good",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "health-conditions-or-illnesses-answer",
+        "value": "No",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "look-after-or-support-others-answer",
+        "value": "Yes, 20 to 34 hours a week",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "sexual-orientation-answer",
+        "value": "Straight or Heterosexual",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "gender-identity-answer",
+        "value": "Yes",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "apprenticeship-answer",
+        "value": "No",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "degree-level-or-above-answer",
+        "value": "Yes",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "nvq-level-answer",
+        "value": [
+          "NVQ level 3 or equivalent",
+          "NVQ level 2 or equivalent",
+          "NVQ level 1 or equivalent"
         ],
-        "lists": [{ "items": ["tjwCXg", "obJDFL", "EsZBbD", "THaczE"], "name": "household", "primary_person": "tjwCXg" }]
-    },
-    "channel": "rh",
-    "region_code": "GB-ENG",
-    "started_at": "2026-06-19T14:04:53.323989+00:00",
-    "submission_language_code": "en"
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "a-level-answer",
+        "value": ["2 or more A levels", "1 A level", "1 AS level"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "gcse-answer",
+        "value": [
+          "5 or more GCSEs grade A* to C or 9 to 4",
+          "Any other GCSEs",
+          "Basic Skills course"
+        ],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "armed-forces-answer-exclusive",
+        "value": ["No"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "employment-status-last-seven-days-answer-exclusive",
+        "value": ["None of these apply"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "not-employed-status-last-seven-days-answer",
+        "value": ["Studying"],
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "looking-for-work-answer",
+        "value": "No",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "about-to-start-job-answer",
+        "value": "No",
+        "list_item_id": "obJDFL"
+      },
+      {
+        "answer_id": "ever-worked-answer",
+        "value": "No, has never worked",
+        "list_item_id": "obJDFL"
+      }
+    ],
+    "lists": [
+      {
+        "items": ["tjwCXg", "obJDFL", "EsZBbD", "THaczE"],
+        "name": "household",
+        "primary_person": "tjwCXg"
+      }
+    ]
+  },
+  "channel": "rh",
+  "region_code": "GB-ENG",
+  "started_at": "2026-06-19T14:04:53.323989+00:00",
+  "submission_language_code": "en"
 }
