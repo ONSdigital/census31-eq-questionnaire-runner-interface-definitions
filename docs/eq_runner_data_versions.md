@@ -9,7 +9,7 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
 `data`
   An object of key-value pairing.
 
-  - For the payload `type` of `surveyresponse` these will typically contain the list items, the answers array and an optional answer codes array.
+  - For the payload `type` of `surveyresponse` these will typically contain the list items and the answers array.
 
     - `lists`
         - An array of [list item objects](#list-item-object) built up during the questionnaire completion [list item object]
