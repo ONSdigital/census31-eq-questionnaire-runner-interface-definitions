@@ -8,13 +8,6 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
 
 `data`
   An object of key-value pairing.
-
-  - For the payload `type` of `surveyresponse` these will typically contain the list items and the answers array.
-
-    - `lists`
-        - An array of [list item objects](#list-item-object) built up during the questionnaire completion [list item object]
-    - `answers`
-        - An array of [answer objects](#answer-object)
       
   - For the payload `type` of `feedback` these will typically contain survey feedback form properties with corresponding user entered values.
     - `feedback_text`
@@ -30,6 +23,13 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
     "feedback_count": "7"
 }
 ```
+
+  - For the payload `type` of `surveyresponse` these will typically contain the list items and the answers array.
+
+    - `lists`
+        - An array of [list item objects](#list-item-object) built up during the questionnaire completion [list item object]
+    - `answers`
+        - An array of [answer objects](#answer-object)
 
 #### List Item Object
 
