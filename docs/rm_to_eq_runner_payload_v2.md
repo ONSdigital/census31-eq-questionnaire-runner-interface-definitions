@@ -94,7 +94,6 @@ An example of a valid schema can be found in [launch_jwt_census](../examples/rm_
     "case_id": "f48e8790-f591-4086-9f6d-98c8642d96cb",
     "channel": "rh",
     "collection_exercise_sid": "77d00da0-9245-40a3-9219-a9f860066167",
-    "eq_id": "census",
     "exp": 1781699607,
     "iat": 1781692407,
     "jti": "a7543507-3eae-4a3b-867a-91459540b1b6",
