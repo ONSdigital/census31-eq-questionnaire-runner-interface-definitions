@@ -29,15 +29,14 @@ This document defines the downstream payload structure for version v2.
 
 #### Schema Selection Fields
 
-In additional to the field above, a schema selection field will be provided which defines the mechanism that was used by EQ Runner to load the questionnaire schema JSON.
+In additional to the field above, a schema field will be provided which defines the mechanism that was used by EQ Runner to load the questionnaire schema JSON.
 
-One of the following must be present:
+One of the following will be present:
 
-| **Property**          | **Definition**                                                                                                         |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------|
-| **schema_url**        | The URL to the remote survey JSON.                                                                                     |
-| **schema_name**       | The name of the schema launched. Will be present in [Schemas Repo][schemas_repo]                                       |
-| **cir_instrument_id** | **deprecated**: The UUID of the collection instrument launched from the registry. This will be removed under `CTE-66` |
+| **Property**          | **Definition**                                                                                                                                                                                                                                                                                                      |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **schema_url**        | The URL to the remote survey JSON.                                                                                                                                                                                                                                                                                  |
+| **schema_name**       | The name of the schema launched. Will be present in [Schemas Repo][schemas_repo]                                                                                                                                                                                                                                    |
 
 ### Optional Fields
 
@@ -95,6 +94,6 @@ EQ Runner will pass the following keys if a value for them exists.
 For additional `data` version examples, see [EQ Runner Data Versions][eq_runner_data_versions]
 
 [eq_runner_data_versions]: eq_runner_data_versions.md "EQ Runner Data Versions"
-[schemas_repo]: https://github.com/ONSdigital/eq-questionnaire-schemas/tree/main/schemas "Schemas Repo"
+[schemas_repo]: https://github.com/ONSdigital/census31-eq-questionnaire-schemas/tree/main/schemas "Schemas Repo"
 [survey_metadata_data_property]: rm_to_eq_runner_payload_v2.md#data-property "Survey Metadata: Data Property"
 [submission_survey_metadata]: #submission-survey-metadata "Submission Survey Metadata"
