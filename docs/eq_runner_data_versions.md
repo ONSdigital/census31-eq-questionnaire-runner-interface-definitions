@@ -4,8 +4,8 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
 
 **NOTE:** The single `data_version` version identifier `0.0.3` is shared between two separate data object definitions `surveyresponse` and `feedback`, however each of these objects has its own `data` construct definitions.
 
-- [surveyresponse data object](#example-surveyresponse-data-object)
-- [feedback data object](#example-feedback-data-object)
+- [surveyresponse data object](#surveyresponse-data-object)
+- [feedback data object](#feedback-data-object)
 
 ---
 
