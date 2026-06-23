@@ -2,12 +2,14 @@
 
 This document defines the data structure of Census EQ Runner's `data_version` `0.0.3`. This is the most recent version of EQ Runner's response data structure and will be used for Census.
 
+**NOTE:** The single `data_version` version identifier `0.0.3` is shared between two separate object definitions `surveyresponse` and `feedback`, however each of these objects has its own `data` construct definitions.
+
 ---
 
-## Version 0.0.3
+## feedback object Version 0.0.3
 
 `data`
-  An object of key-value pairing.
+  An object of key-value pairs.
       
   - For the payload `type` of `feedback` these will typically contain survey feedback form properties with corresponding user entered values.
     - `feedback_text`
@@ -23,6 +25,11 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
     "feedback_count": "7"
 }
 ```
+
+## surveyresponse object Version 0.0.3
+
+`data`
+  An object of arrays.
 
   - For the payload `type` of `surveyresponse` these will typically contain the list items and the answers array.
 
