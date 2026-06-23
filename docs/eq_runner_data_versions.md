@@ -2,43 +2,26 @@
 
 This document defines the data structure of Census EQ Runner's `data_version` `0.0.3`. This is the most recent version of EQ Runner's response data structure and will be used for Census.
 
-**NOTE:** The single `data_version` version identifier `0.0.3` is shared between two separate object definitions `surveyresponse` and `feedback`, however each of these objects has its own `data` construct definitions.
+**NOTE:** The single `data_version` version identifier `0.0.3` is shared between two separate data object definitions `surveyresponse` and `feedback`, however each of these objects has its own `data` construct definitions.
+
+- [surveyresponse data object](#example-surveyresponse-data-object)
+- [feedback data object](#example-feedback-data-object)
 
 ---
 
-## feedback object Version 0.0.3
-
-`data`
-  An object of key-value pairs.
-      
-  - For the payload `type` of `feedback` these will typically contain survey feedback form properties with corresponding user entered values.
-    - `feedback_text`
-    - `feedback_type`
-    - `feedback_count`
-
-### Example data_version 0.0.3 for feedback JSON payload
-
-```json
-"data": {
-    "feedback_text": "I like this survey",
-    "feedback_type": "Page design and structure",
-    "feedback_count": "7"
-}
-```
-
-## surveyresponse object Version 0.0.3
+## surveyresponse data object
 
 `data`
   An object of arrays.
 
-  - For the payload `type` of `surveyresponse` these will typically contain the list items and the answers array.
+  - For the payload `type` of `surveyresponse` these will typically contain the lists array and the answers array.
 
     - `lists`
-        - An array of [list item objects](#list-item-object) built up during the questionnaire completion [list item object]
+        - An array of list objects built up during the questionnaire completion
     - `answers`
-        - An array of [answer objects](#answer-object)
+        - An array of answer objects containing the answers provided during the questionnaire completion
 
-#### List Item Object
+#### List Object
 
 - `name`: the name of the list (e.g. `people-who-live-here`)
 - `items`: an array of strings of the item identifiers in the list
@@ -46,11 +29,11 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
 
 #### Answer Object
 
-- `answer_id`: the answer identifier
+- `answer_id`: the answer identifier (e.g. `job-description-answer`)
 - `value`: the value of the answer(s) provided for the `answer_id`
 - `list_item_id`: [optional] the ID of the list item the answer was provided for (if answering in the context of a list item)
 
-### Example data version 0.0.3 for surveyresponse JSON payload
+### Example surveyresponse data object
 
 ```json
 "data": {
@@ -203,3 +186,24 @@ This document defines the data structure of Census EQ Runner's `data_version` `0
   }
 ]
 ```
+
+## feedback data object
+
+`data`
+  An object of key-value pairs.
+      
+  - For the payload `type` of `feedback` these will typically contain survey feedback form properties with corresponding user entered values.
+    - `feedback_text`
+    - `feedback_type`
+    - `feedback_count`
+
+### Example feedback data object
+
+```json
+"data": {
+    "feedback_text": "I like this survey",
+    "feedback_type": "Page design and structure",
+    "feedback_count": "7"
+}
+```
+
