@@ -22,5 +22,5 @@ To flush responses to the downstream systems, a `/flush` endpoint is available.
 This endpoint takes a JWT in the same way as `/session` but with `roles` including the role of `flusher`.
 
 [jwt_profile]: jwt_profile.md "JWT Profile Definition"
-[eq_runner_to_downstream]: electronic_questionnaire_runner_to_downstream.md "Electronic Questionnaire Runner to Downstream Definition"
+[eq_runner_to_downstream]: submission_electronic_questionnaire_runner_to_downstream.md "Electronic Questionnaire Runner to Downstream Definition"
 [rm_to_eq_runner_payload_v2]: rm_to_eq_runner_payload_v2.md "RM to EQ Runner Payload v2 Definition"

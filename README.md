@@ -13,8 +13,8 @@ This repository contains the documentation, definitions, schema specifications, 
 Documentation can be found in `/docs`.
 
 - [JSON Web Token (JWT) Profile](docs/jwt_profile.md)
-- [EQ Launch - Upstream Respondent Management System to EQ Runner](docs/respondent_management_to_electronic_questionnaire_runner.md)
-- [EQ Submission - EQ Runner to Downstream Ingestion Service](docs/electronic_questionnaire_runner_to_downstream.md)
+- [EQ Launch - Upstream Respondent Management System to EQ Runner](docs/launch_respondent_management_to_electronic_questionnaire_runner.md)
+- [EQ Submission - EQ Runner to Downstream Ingestion Service](docs/submission_electronic_questionnaire_runner_to_downstream.md)
 - [JSON Examples](examples)
 
 ## JSON Schema Validation
