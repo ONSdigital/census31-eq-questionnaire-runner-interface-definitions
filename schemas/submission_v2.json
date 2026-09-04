@@ -31,9 +31,6 @@
     "origin": {
       "$ref": "common/definitions.json#/origin"
     },
-    "region_code": {
-      "$ref": "common/definitions.json#/region_code"
-    },
     "schema": {
       "$ref": "common/definitions.json#/schema"
     },
@@ -138,7 +135,6 @@
     "case_id",
     "survey_metadata",
     "data",
-    "region_code",
     "schema",
     "schema_name"
   ]
