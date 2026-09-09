@@ -7,20 +7,17 @@
   "iat": 1781693946,
   "jti": "1c6eff87-cc03-425b-9bd4-f4c81596cd86",
   "language_code": "en",
-  "region_code": "GB-ENG",
-  "response_expires_at": "2027-06-22T13:23:39+00:00",
   "response_id": "1929",
-  "schema_name": "census_household_gb_eng",
+  "schema": {
+    "survey": "CENSUS",
+    "form_type": "H",
+    "region_code": "GB-ENG"
+  },
   "survey_metadata": {
-    "data": {
-      "case_type": "HH",
-      "display_address": "15 Credibility Street, Bristol, BS7 8ES",
-      "form_type": "H",
-      "period_id": "2027",
-      "ru_ref": "uprn:00001",
-      "user_id": "UNKNOWN"
-    },
-    "receipting_keys": ["questionnaire_id"]
+    "case_type": "HH",
+    "display_address": "15 Credibility Street, Bristol, BS7 8ES",
+    "ru_ref": "uprn:00001",
+    "questionnaire_id": "1234567890"
   },
   "tx_id": "7e916adc-1f36-4f1e-81f9-57a4ab4ad183",
   "version": "v2"

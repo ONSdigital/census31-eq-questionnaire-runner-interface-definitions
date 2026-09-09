@@ -3,79 +3,27 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Survey Metadata Definitions",
   "type": "object",
-  "$defs": {
-    "census_metadata": {
-      "description": "The metadata properties that can be for census surveys.",
-      "properties": {
-        "case_type": {
-          "$ref": "definitions.json#/case_type"
-        },
-        "display_address": {
-          "$ref": "definitions.json#/display_address"
-        },
-        "form_type": {
-          "$ref": "definitions.json#/form_type"
-        },
-        "period_id": {
-          "$ref": "definitions.json#/period_id"
-        },
-        "ru_ref": {
-          "$ref": "definitions.json#/ru_ref"
-        },
-        "user_id": {
-          "$ref": "definitions.json#/user_id"
-        },
-        "survey_id": {
-          "$ref": "definitions.json#/survey_id"
-        },
-        "questionnaire_id": {
-          "$ref": "definitions.json#/questionnaire_id"
-        }
-      },
-      "required": [
-        "user_id",
-        "period_id",
-        "form_type",
-        "ru_ref",
-        "display_address",
-        "case_type"
-      ]
-    },
-    "survey_metadata_data": {
-      "description": "An object that holds metadata about the survey.",
-      "anyOf": [
-        {
-          "$ref": "#/$defs/census_metadata"
-        }
-      ]
-    }
-  },
-  "submission_survey_metadata": {
-    "description": "An object that holds metadata about the survey.",
-    "allOf": [
-      {
-        "$ref": "#/$defs/survey_metadata_data"
-      }
-    ],
-    "unevaluatedProperties": false,
-    "required": ["survey_id"]
-  },
   "survey_metadata": {
     "type": "object",
+    "description": "The survey metadata properties for census surveys.",
     "properties": {
-      "data": {
-        "$ref": "#/$defs/survey_metadata_data",
-        "unevaluatedProperties": false
+      "case_type": {
+        "$ref": "definitions.json#/case_type"
       },
-      "receipting_keys": {
-        "type": "array",
-        "items": {
-          "type": "string"
-        },
-        "minItems": 1
+      "display_address": {
+        "$ref": "definitions.json#/display_address"
+      },
+      "ru_ref": {
+        "$ref": "definitions.json#/ru_ref"
+      },
+      "user_id": {
+        "$ref": "definitions.json#/user_id"
+      },
+      "questionnaire_id": {
+        "$ref": "definitions.json#/questionnaire_id"
       }
     },
-    "minProperties": 1,
-    "additionalProperties": false
+    "additionalProperties": false,
+    "required": ["ru_ref", "display_address", "case_type", "questionnaire_id"]
   }
 }

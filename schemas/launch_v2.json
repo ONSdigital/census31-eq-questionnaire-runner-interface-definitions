@@ -4,6 +4,9 @@
   "title": "ONS EQ Launch Schema v2",
   "type": "object",
   "properties": {
+    "account_service_log_out_url": {
+      "$ref": "common/definitions.json#/account_service_log_out_url"
+    },
     "account_service_url": {
       "$ref": "common/definitions.json#/account_service_url"
     },
@@ -30,14 +33,11 @@
     "language_code": {
       "$ref": "common/definitions.json#/launch_language_code"
     },
-    "region_code": {
-      "$ref": "common/definitions.json#/region_code"
-    },
-    "response_expires_at": {
-      "$ref": "common/definitions.json#/response_expires_at"
-    },
     "response_id": {
       "$ref": "common/definitions.json#/response_id"
+    },
+    "schema": {
+      "$ref": "common/definitions.json#/schema"
     },
     "schema_name": {
       "$ref": "common/definitions.json#/schema_name"
@@ -54,14 +54,8 @@
     "version": {
       "$ref": "common/definitions.json#/payload_version_v2"
     },
-    "survey": {
-      "$ref": "common/definitions.json#/survey"
-    },
     "eq_id": {
       "$ref": "common/definitions.json#/eq_id"
-    },
-    "account_service_log_out_url": {
-      "$ref": "common/definitions.json#/account_service_log_out_url"
     }
   },
   "required": [
@@ -73,8 +67,7 @@
     "account_service_url",
     "case_id",
     "collection_exercise_sid",
-    "response_id",
-    "response_expires_at"
+    "response_id"
   ],
   "additionalProperties": false,
   "oneOf": [
@@ -83,6 +76,9 @@
     },
     {
       "required": ["schema_url"]
+    },
+    {
+      "required": ["schema"]
     }
   ]
 }

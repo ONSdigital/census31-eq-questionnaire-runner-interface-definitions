@@ -9,17 +9,20 @@
   "flushed": false,
   "submitted_at": "2026-06-19T14:06:27+00:00",
   "launch_language_code": "en",
-  "survey_metadata": {
-    "survey_id": "census",
-    "user_id": "UNKNOWN",
-    "period_id": "2027",
-    "display_address": "15 Credibility Street, Bristol, BS7 8ES",
+  "period_id": "2027",
+  "schema": {
+    "survey": "CENSUS",
     "form_type": "H",
+    "region_code": "GB-ENG"
+  },
+  "schema_name": "census_household_gb_eng",
+  "survey_metadata": {
+    "user_id": "UNKNOWN",
+    "display_address": "15 Credibility Street, Bristol, BS7 8ES",
     "questionnaire_id": "1234567890",
     "case_type": "HH",
     "ru_ref": "uprn:00001"
   },
-  "schema_name": "census_household_gb_eng",
   "data": {
     "answers": [
       { "answer_id": "first-name", "value": "Bob", "list_item_id": "tjwCXg" },
@@ -446,7 +449,6 @@
     ]
   },
   "channel": "rh",
-  "region_code": "GB-ENG",
   "started_at": "2026-06-19T14:04:53.323989+00:00",
   "submission_language_code": "en"
 }

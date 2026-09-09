@@ -7,5 +7,5 @@
 
 ### Checklist
 
-* [ ] Changes to the spec have been added to example schemas in [examples/](examples/)
+* [ ] Changes to the spec have been added to example schemas in the examples directory
 * [ ] JSON Schema definitions have been updated

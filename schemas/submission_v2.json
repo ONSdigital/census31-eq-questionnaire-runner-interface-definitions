@@ -25,11 +25,14 @@
     "launch_language_code": {
       "$ref": "common/definitions.json#/launch_language_code"
     },
+    "period_id": {
+      "$ref": "common/definitions.json#/period_id"
+    },
     "origin": {
       "$ref": "common/definitions.json#/origin"
     },
-    "region_code": {
-      "$ref": "common/definitions.json#/region_code"
+    "schema": {
+      "$ref": "common/definitions.json#/schema"
     },
     "schema_name": {
       "$ref": "common/definitions.json#/schema_name"
@@ -47,7 +50,7 @@
       "$ref": "common/definitions.json#/submitted_at"
     },
     "survey_metadata": {
-      "$ref": "common/survey_metadata.json#/submission_survey_metadata"
+      "$ref": "common/survey_metadata.json#/survey_metadata"
     },
     "tx_id": {
       "$ref": "common/definitions.json#/tx_id"
@@ -64,34 +67,6 @@
   },
   "additionalProperties": false,
   "unevaluatedProperties": false,
-  "$defs": {
-    "sds_dataset_id_exists": {
-      "properties": {
-        "survey_metadata": {
-          "properties": {
-            "sds_dataset_id": {
-              "$ref": "common/definitions.json#/sds_dataset_id"
-            }
-          },
-          "required": ["sds_dataset_id"]
-        }
-      },
-      "required": ["survey_metadata"]
-    },
-    "data_supplementary_data_exists": {
-      "properties": {
-        "data": {
-          "properties": {
-            "supplementary_data": {
-              "type": "object"
-            }
-          },
-          "required": ["supplementary_data"]
-        }
-      },
-      "required": ["data"]
-    }
-  },
   "allOf": [
     {
       "if": {
@@ -130,13 +105,6 @@
                 "$ref": "common/response_data.json#/survey_response_0_0_3"
               }
             }
-          },
-          "else": {
-            "properties": {
-              "data": {
-                "$ref": "common/response_data.json#/survey_response_0_0_1"
-              }
-            }
           }
         }
       }
@@ -152,22 +120,6 @@
       "then": {
         "required": ["submission_language_code"]
       }
-    },
-    {
-      "if": {
-        "$ref": "#/$defs/sds_dataset_id_exists"
-      },
-      "then": {
-        "$ref": "#/$defs/data_supplementary_data_exists"
-      }
-    },
-    {
-      "if": {
-        "$ref": "#/$defs/data_supplementary_data_exists"
-      },
-      "then": {
-        "$ref": "#/$defs/sds_dataset_id_exists"
-      }
     }
   ],
   "required": [
@@ -182,14 +134,8 @@
     "collection_exercise_sid",
     "case_id",
     "survey_metadata",
-    "data"
-  ],
-  "oneOf": [
-    {
-      "required": ["schema_name"]
-    },
-    {
-      "required": ["schema_url"]
-    }
+    "data",
+    "schema",
+    "schema_name"
   ]
 }

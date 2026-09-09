@@ -120,7 +120,7 @@
   },
   "period_id": {
     "$ref": "#/non_empty_string",
-    "description": "A string representing the business area recognised time period for the collection exercise.",
+    "description": "A string representing the recognised time period for the collection exercise.",
     "examples": ["2027", "2031"]
   },
   "period_str": {
@@ -147,10 +147,6 @@
     "examples": ["GB-ENG"],
     "pattern": "^(GB-)[A-Z]{3}$"
   },
-  "response_expires_at": {
-    "$ref": "#/$defs/iso_8601_datetime",
-    "description": "An ISO_8601 formatted date-time after which the unsubmitted partial response can be deleted from the database."
-  },
   "response_id": {
     "$ref": "#/non_empty_string",
     "description": "A unique identifier for the questionnaire response.",
@@ -168,6 +164,27 @@
     "type": "string",
     "description": "The reporting unit reference.",
     "examples": ["uprn:00001"]
+  },
+  "schema": {
+    "type": "object",
+    "description": "The properties that EQ resolves to the questionnaire schema to launch.",
+    "properties": {
+      "survey": {
+        "$ref": "#/non_empty_string",
+        "description": "The type of survey e.g. CENSUS, CCS.",
+        "examples": ["CENSUS"]
+      },
+      "form_type": {
+        "$ref": "#/non_empty_string",
+        "description": "The form type for the case e.g. H, I or C. For questionnaire variants this could be HA, HB, IA or IB.",
+        "examples": ["H"]
+      },
+      "region_code": {
+        "$ref": "#/region_code"
+      }
+    },
+    "required": ["survey", "form_type", "region_code"],
+    "additionalProperties": false
   },
   "schema_name": {
     "type": "string",
@@ -213,12 +230,6 @@
     "description": "An identifier from RM",
     "minLength": 1
   },
-  "survey": {
-    "type": "string",
-    "description": "The ONS survey name used in Census 2027 questionnaire schema resolution.",
-    "minLength": 1,
-    "examples": ["census"]
-  },
   "eq_id": {
     "type": "string",
     "description": "Legacy portion identifier of an ONS questionnaire schema.",
@@ -237,60 +248,5 @@
     "$ref": "#/non_empty_string",
     "description": "The id assigned by the respondent management system.",
     "examples": ["UNKNOWN"]
-  },
-  "blood_test_barcode": {
-    "type": "string",
-    "description": "Barcode for respondents blood test (PHM specific)",
-    "examples": ["BLT11111111"]
-  },
-  "swab_test_barcode": {
-    "type": "string",
-    "description": "Barcode for respondents swab test (PHM specific)",
-    "examples": ["swT11111111"]
-  },
-  "participant_id": {
-    "$ref": "#/non_empty_string",
-    "maxLength": 17,
-    "description": "ID of the participant (PHM specific)",
-    "examples": ["DHR-12345678901"]
-  },
-  "participant_window_id": {
-    "$ref": "#/non_empty_string",
-    "maxLength": 21,
-    "description": "ID of the participant appended with a hyphen and 3 digits (PHM specific)",
-    "examples": ["DHR-12345678901-001"]
-  },
-  "portal_id": {
-    "type": "string",
-    "minLength": 1,
-    "maxLength": 7,
-    "pattern": "^[0-9]+$",
-    "description": "The customer facing version of a participant ID used for telephony support (PHM specific)",
-    "examples": ["1", "1234567"]
-  },
-  "test_questions": {
-    "type": "string",
-    "description": "flag to toggle the test questions (PHM specific)",
-    "enum": ["T", "F"]
-  },
-  "collex_open_date": {
-    "$ref": "#/non_empty_string",
-    "description": "Formatted date to display in questionnaire (PHM specific)",
-    "examples": ["08 Jan 2023"]
-  },
-  "collex_close_date": {
-    "$ref": "#/non_empty_string",
-    "description": "Formatted date to display in questionnaire (PHM specific)",
-    "examples": ["08 Jan 2023"]
-  },
-  "first_name": {
-    "$ref": "#/non_empty_string",
-    "description": "Respondents first name for display (PHM specific)",
-    "examples": ["08 Jan 2023"]
-  },
-  "sds_dataset_id": {
-    "type": "string",
-    "description": "The id of the dataset that eQ will use to query SDS",
-    "$ref": "#/$defs/uuid"
   }
 }
